@@ -1,0 +1,50 @@
+.BottomBar {
+    position: fixed;
+    z-index: 100;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    /*border-top: 1px solid rgb(156,152,141);*/
+}
+
+.BottomBar-inputContainer {
+    padding: 1rem;
+    background: rgb(60, 60, 60);
+}
+
+.BottomBar-input {
+    border: 0;
+    padding: 0.3rem;
+    border-radius: 2px;
+}
+
+.BottomBar-input:focus {
+    outline: none;
+}
+
+.BottomBar-navContainer {
+    background: rgb(220, 220, 220);
+}
+
+.BottomBar-navItem {
+    display: inline-block;
+    padding: 0.5rem;
+    color: rgb(100, 100, 100);
+    text-decoration: none;
+}
+
+.BottomBar-navItem:hover {
+    color: rgb(30, 30, 30);
+}
+
+
+.BottomBar-navItemLink {
+    color: white;
+    text-decoration: none;
+}
+
+.BottomBar-navList {
+    padding:0;
+    margin:0;
+}

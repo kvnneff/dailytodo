@@ -1,0 +1,9 @@
+@import './lib/todo-view';
+
+.List {
+    padding: var(--space-small-px);
+}
+
+.List-title {
+    margin-bottom: var(--space-large-px);
+}
