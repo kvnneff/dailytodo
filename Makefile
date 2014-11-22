@@ -1,8 +1,9 @@
 BIN := ./node_modules/.bin
+TESTS := $(shell find ./lib -name "test.js")
 
 build: node_modules build-tests
-	@$(BIN)/duo --root lib/ index.js > build/index.js -o ../build
-	@$(BIN)/duo --root lib/ index.css > build/index.css -o ../build
+	@$(BIN)/duo lib/index.js > build/index.js -o ../build
+	@$(BIN)/duo lib/index.css > build/index.css -o ../build
 	@node build.js
 
 example: node_modules
@@ -16,7 +17,7 @@ build-tests:
 node_modules:
 	npm install
 
-test: build
+test: build-tests
 	@$(BIN)/duo-test \
 		-c 'make build' \
 		--build build/tests.js \
@@ -29,4 +30,4 @@ test-saucelabs:
 clean:
 	@rm -fr build/* components node_modules
 
-.PHONY: clean test example build
+.PHONY: clean test example build build-tests
