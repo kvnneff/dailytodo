@@ -2,8 +2,8 @@ BIN := ./node_modules/.bin
 TESTS := $(shell find ./lib -name "test.js")
 
 build: node_modules build-tests
-	@$(BIN)/duo lib/index.js > build/index.js -o ../build
-	@$(BIN)/duo lib/index.css > build/index.css -o ../build
+	@$(BIN)/duo lib/index.js > build/index.js
+	@$(BIN)/duo lib/index.css > build/index.css
 	@node build.js
 
 example: node_modules

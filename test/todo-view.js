@@ -1,3 +1,4 @@
+'use strict';
 var assert = require('component/assert');
 var View = require('/lib/list-view/lib/todo-view');
 var Todo = require('/lib/list/lib/todo');
