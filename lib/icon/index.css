@@ -1,0 +1,8 @@
+.Icon {
+    background-size: 20px;
+    fill: var(--color-dark-gray);
+}
+
+.Icon--deleteSVG {
+    fill: var(--color-dark-gray);
+}

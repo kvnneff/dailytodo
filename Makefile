@@ -3,7 +3,7 @@ TESTS := $(shell find ./lib -name "test.js")
 
 build: node_modules build-tests
 	@$(BIN)/duo lib/index.js > build/index.js
-	@$(BIN)/duo lib/index.css > build/index.css
+	@$(BIN)/duo --use duo-suit-conformance lib/index.css > build/index.css
 	@node build.js
 
 example: node_modules

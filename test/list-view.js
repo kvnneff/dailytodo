@@ -40,13 +40,13 @@ describe('ListView', function () {
 });
 
 describe('ListView#filter', function() {
-    it('adds hidden class to filtered todo elements', function () {
+    it('adds u-hidden class to filtered todo elements', function () {
         var list = List();
         var view = ListView(list);
         list.createTodo({title: 'Foo', complete: false});
         list.createTodo({title: 'Bar', complete: true});
         view.filter('complete', true);
-        assert(view.listEl.children[0].classList.contains('hidden'));
-        assert(!(view.listEl.children[1].classList.contains('hidden')));
+        assert(view.listEl.children[0].classList.contains('u-hidden'));
+        assert(!(view.listEl.children[1].classList.contains('u-hidden')));
     });
 });

@@ -1,3 +1,7 @@
+@import 'suitcss/utils-size';
+
+/** @define Todo; use strict */
+
 .Todo {
     margin-bottom: var(--space-medium-px);
 }
@@ -35,53 +39,52 @@
     opacity: 1;
 }
 
-.Todo .complete label:after {
+.Todo.is-complete label:after {
     opacity: 0.3;
 }
 
+.Todo-checkbox {}
+
 .Todo-titleContainer {
     display: inline-block;
-    width: 324px;
+    width: 300px;
     margin-left: 36px;
 }
 
 .Todo-title {
-    border-bottom: 1px solid var(--color-white);
+    border: 1px solid var(--color-white);
+    border-radius: 3px;
     display: inline-block;
+    overflow: hidden;
     padding: var(--space-extra-small-px);
-    width:100%;
-
 }
 
 .Todo-title:focus {
+    border:1px dashed var(--color-silver);
     outline: rgb(182, 134, 0);
 }
 
-.Todo-title:hover {}
+.Todo-title:focus:hover {
+    cursor: text;
+}
+
+.Todo-title:hover {
+    border:1px dashed var(--color-silver);
+    cursor: pointer;
+}
 
 .Todo-title.is-editing {
     background: var(--color-faded-yellow);
 }
 
-.Todo-delete {
-    background-size: 20px;
-    float: right;
+.Todo-icon {
     width: 20px;
     height: 20px;
-}
-
-.Todo-delete .Icon-delete {
-    fill: var(--color-dark-gray);
     cursor: pointer;
-    opacity: 0.3;
-}
-
-.Todo-delete .Icon-delete:hover {
-    fill: var(--color-dark-gray);
-    cursor: pointer;
+    float: right;
     opacity: 1;
 }
 
-.Todo.hidden {
-    display: none !important;
+.Todo-icon:hover {
+    opacity: 0.7;
 }

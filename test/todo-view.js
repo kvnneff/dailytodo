@@ -78,24 +78,24 @@ describe('TodoView#toggleComplete', function () {
 });
 
 describe('TodoView#hide', function () {
-    it('adds `hidden` class to todo element', function () {
+    it('adds `u-hidden` class to todo element', function () {
         var todo = Todo();
         var view = View(todo);
-        assert(!(view.el.classList.contains('hidden')));
+        assert(!(view.el.classList.contains('u-hidden')));
         view.hide();
-        assert(view.el.classList.contains('hidden'));
+        assert(view.el.classList.contains('u-hidden'));
     });
 });
 
 describe('TodoView#show', function () {
-    it('removes `hidden` class from todo element', function () {
+    it('removes `u-hidden` class from todo element', function () {
         var todo = Todo();
         var view = View(todo);
-        assert(!(view.el.classList.contains('hidden')));
+        assert(!(view.el.classList.contains('u-hidden')));
         view.hide();
-        assert(view.el.classList.contains('hidden'));
+        assert(view.el.classList.contains('u-hidden'));
         view.show();
-        assert(!(view.el.classList.contains('hidden')));
+        assert(!(view.el.classList.contains('u-hidden')));
     });
 });
 

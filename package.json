@@ -26,6 +26,7 @@
     "myth": "^1.2.1"
   },
   "dependencies": {
+    "duo-suit-conformance": "^1.0.0",
     "pouchdb": "pouchdb/pouchdb"
   }
 }
