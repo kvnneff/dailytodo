@@ -2,7 +2,7 @@ BIN := ./node_modules/.bin
 TESTS := $(shell find ./lib -name "test.js")
 
 build: node_modules build-tests
-	@$(BIN)/duo lib/index.js > build/index.js -g dailytodo
+	@$(BIN)/duo lib/index.js > build/index.js
 	@$(BIN)/duo --use duo-suit-conformance lib/index.css > build/index.css
 	@node build.js
 

@@ -101,6 +101,7 @@ page('*', function (context, next) {
 });
 
 page('/', function (context, next) {
+    console.log('sdfsf');
     List.today(function (err, list) {
         var listView = ListView(list);
         listWrapper.appendChild(listView.el);
@@ -14537,4 +14538,4 @@ module.exports = BottomBar;
 }, {"component/emitter":9,"component/classes":27,"component/domify":15,"./template.html":32}],
 32: [function(require, module, exports) {
 module.exports = '<div class="BottomBar">\n    <div class="Grid BottomBar-navContainer">\n        <a href="/yesterday" class="Grid-cell u-size1of4 BottomBar-navItem">Yesterday</a>\n        <a href="/" class="Grid-cell u-size1of4 BottomBar-navItem">Today</a>\n        <a href="/complete" class="Grid-cell u-size1of4 BottomBar-navItem">Complete</a>\n        <a href="/incomplete" class="Grid-cell u-size1of4 BottomBar-navItem">Incomplete</a>\n    </div>\n    <div class="BottomBar-inputContainer">\n        <input type="text" class="BottomBar-input">\n    </div>\n</div>';
-}, {}]}, {}, {"1":"dailytodo"})
+}, {}]}, {}, {"1":""})
