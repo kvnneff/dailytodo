@@ -1,13 +1,17 @@
 @import 'suitcss/utils-size';
+@import 'suitcss/utils-display';
 
 /** @define Todo; use strict */
 
 .Todo {
+    border-radius: 3px;
     margin-bottom: var(--space-medium-px);
+    /*background: #C1B398;*/
+    padding: 0.5rem;
 }
 
 .Todo label {
-    border: 3px solid var(--color-dark-gray);
+    border: 3px solid var(--color-silver);
     cursor: pointer;
     display: inline-block;
     height: 20px;
@@ -32,7 +36,7 @@
 }
 
 .Todo label:hover::after {
-    opacity: 0.3;
+    opacity: 0.5;
 }
 
 .Todo input[type=checkbox]:checked + label:after {
@@ -52,7 +56,7 @@
 }
 
 .Todo-title {
-    border: 1px solid var(--color-white);
+    border:1px solid var(--color-dark-gray);
     border-radius: 3px;
     display: inline-block;
     overflow: hidden;
@@ -60,7 +64,7 @@
 }
 
 .Todo-title:focus {
-    border:1px dashed var(--color-silver);
+    border-bottom:1px dashed var(--color-gray);
     outline: rgb(182, 134, 0);
 }
 
@@ -69,12 +73,12 @@
 }
 
 .Todo-title:hover {
-    border:1px dashed var(--color-silver);
+    border-bottom:1px dashed var(--color-gray);
     cursor: pointer;
 }
 
 .Todo-title.is-editing {
-    background: var(--color-faded-yellow);
+    background: rgb(40, 40, 40);
 }
 
 .Todo-icon {
