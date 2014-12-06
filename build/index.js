@@ -94,6 +94,8 @@ var listWrapper = document.body.querySelector('.ListWrapper');
 var bottomBarWrapper = document.body.querySelector('.BottomBarWrapper');
 var bottomBar = BottomBar();
 
+page.base('/dailytodo');
+
 page('*', function (context, next) {
     bottomBar.active(context.pathname);
     listWrapper.innerHTML = '';
@@ -101,7 +103,6 @@ page('*', function (context, next) {
 });
 
 page('/', function (context, next) {
-    console.log('sdfsf');
     List.today(function (err, list) {
         var listView = ListView(list);
         listWrapper.appendChild(listView.el);
